@@ -3,6 +3,10 @@ const router = express.Router();
 const { StoreController } = require("../controller");
 
 
-router.get("/all-user", StoreController.get_user)
+router.post("/register", StoreController.register_user)
+router.put("/active-store", StoreController.active_user)
+router.post("/login", StoreController.login_user)
+
+
 
 module.exports = router

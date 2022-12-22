@@ -1,8 +1,19 @@
+const { ObjectId } = require("mongodb")
+
 const user_schema = {
     username: { type: String },
-    age: { type: Number },
-    birthday: { type: Number },
-    access_level: { type: Number },
+    birthday_date: { type: Number },
+    password: { type: String },
+    email: { type: String },
+    status: { type: Boolean },
+    epoch: { type: Number },
+    full_name: {type : Array}
 }
 
-module.exports = { user_schema }
+const temp_code = {
+    code: { type: String },
+    email: { type: String },
+    user_id: {type : ObjectId}
+}
+
+module.exports = { user_schema, temp_code }
