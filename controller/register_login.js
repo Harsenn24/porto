@@ -116,7 +116,7 @@ class StoreController {
             if (check_pass === false) { throw { message: 'Password is incorrect' } }
 
             const payload_jwt = {
-                id: find_user._id.toString(),
+                _id: find_user._id.toString(),
                 email: decrypt_word(find_user.email, 8),
                 username: find_user.username
             }
