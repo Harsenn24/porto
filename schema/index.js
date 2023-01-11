@@ -18,6 +18,7 @@ const temp_code = {
 
 const product_schema = {
     epoch: { type: Number },
+    epoch_update: { type: Number },
     name: { type: String },
     quantity: { type: Number },
     user_id: { type: ObjectId },

@@ -74,6 +74,12 @@ function error_handle(err, req, res, next) {
             message = err.message
             break;
 
+        case 'User is not authorized':
+            code = 400
+            code_number = 14
+            message = err.message
+            break;
+
         default:
             code = 500
             code_number = 999
