@@ -17,6 +17,8 @@ router.use(authentif)
 
 router.post("/product-create", result_image, ProductController.create_product)
 router.put("/products/:id", authorization, ProductController.edit_product)
+router.delete("/products/:id", authorization, ProductController.delete_product)
+
 
 
 

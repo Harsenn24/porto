@@ -24,7 +24,8 @@ const product_schema = {
     user_id: { type: ObjectId },
     description: { type: String },
     price: { type: Number },
-    image: { type: String }
+    image: { type: String },
+    deleted: { type: Boolean }
 }
 
 module.exports = { user_schema, temp_code, product_schema }

@@ -145,6 +145,29 @@ class ProductController {
             next(error)
         }
     }
+
+
+    static async delete_product(req, res, next) {
+        try {
+            const { id } = req.params
+            const product_id_decrypt = decrypt_word(id, 12)
+
+            console.log(product_id_decrypt)
+
+            const delete_data = await Product.findByIdAndUpdate(
+                { _id: ObjectID(product_id_decrypt) },
+                {
+                    '$set': { deleted: true }
+                }
+            )
+
+            res.status(200).json(result_data())
+
+        } catch (error) {
+            console.log(error);
+            next(error)
+        }
+    }
 }
 
 module.exports = { ProductController }
