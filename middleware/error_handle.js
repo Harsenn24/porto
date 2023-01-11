@@ -80,6 +80,30 @@ function error_handle(err, req, res, next) {
             message = err.message
             break;
 
+        case 'Price is required':
+            code = 400
+            code_number = 15
+            message = err.message
+            break;
+
+        case 'Description is required':
+            code = 400
+            code_number = 16
+            message = err.message
+            break;
+
+        case 'Quantity is required':
+            code = 400
+            code_number = 17
+            message = err.message
+            break;
+
+        case 'Name is required':
+            code = 400
+            code_number = 18
+            message = err.message
+            break;
+
         default:
             code = 500
             code_number = 999

@@ -16,7 +16,7 @@ router.get("/product-image", ProductController.product_image)
 router.use(authentif)
 
 router.post("/product-create", result_image, ProductController.create_product)
-router.put("/products-all/:id", authorization, ProductController.edit_product)
+router.put("/products/:id", authorization, ProductController.edit_product)
 
 
 
