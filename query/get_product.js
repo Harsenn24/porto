@@ -43,7 +43,12 @@ function get_product_query(search_product) {
             }
         },
         {
-            '$match': { 'status': 'Aktif' }
+            '$match': {
+                '$and': [
+                    { 'status': 'Aktif' },
+                    { 'deleted': false }
+                ]
+            }
         },
         {
             '$match': search_something('name', search_product)
