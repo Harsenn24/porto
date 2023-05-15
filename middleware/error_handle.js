@@ -112,7 +112,7 @@ function error_handle(err, req, res, next) {
     default:
       code = 500;
       code_number = 999;
-      message = `Custom Error : ${err}`;
+      message = `Global Error : ${err.message}`;
       break;
   }
 
