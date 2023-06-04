@@ -168,6 +168,8 @@ class ProductController {
             next(error)
         }
     }
+
+    static async 
 }
 
 module.exports = { ProductController }

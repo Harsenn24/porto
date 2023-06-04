@@ -29,11 +29,11 @@ class StoreController {
 
             email = encrypt_word(email, 8)
 
-            let check_username = await User.find({ username })
+            // let check_username = await User.find({ username })
 
-            if (check_username.length > 0) {
-                throw { message: 'Try another username' }
-            }
+            // if (check_username.length > 0) {
+            //     throw { message: 'Try another username' }
+            // }
 
             let insert_data = { username, birthday_date, password, email, epoch, status, full_name }
 
